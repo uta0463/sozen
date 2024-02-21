@@ -1,0 +1,152 @@
+// ==========================================================================
+// l-footer
+// ==========================================================================
+
+
+.l-footer {
+  padding-top: 120px;
+
+  &__outer {
+    padding: 0 25px;
+  }
+
+  &__inner {
+    padding: 0 min(55px, 3.819445vw);
+  }
+
+  &__head {
+    width: 100%;
+    padding-bottom: 93px;
+    border-bottom: solid 1px var(--gray2);
+    display: flex;
+  }
+
+  &__logo {
+    width: 80px;
+    margin-right: min(160px, 11.1112vw);
+  }
+
+  &__nav {
+    display: flex;
+
+    &__col {
+
+      & + .l-footer__nav__col {
+        margin-left: min(80px, 5.5556vw);
+      }
+    }
+  }
+
+  &__menu {
+
+    &__item {
+      font-size: 15px;
+      line-height: 1.5;
+
+      & > a {}
+
+      &:not(.-child) {
+        margin-bottom: 20px;
+      }
+
+      &.-child {
+        color: var(--gray1);
+        font-size: 14px;
+        line-height: 2.4;
+      }
+    }
+  }
+
+  &__foot {
+    padding: 54px 0;
+  }
+
+  &__copy {
+    color: var(--gray1);
+    font-family: $font-en;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+// 下層
+.p-page {
+
+  .l-footer {
+    padding-top: 60px;
+  }
+}
+
+
+@include mq('sp') {
+
+  .l-footer {
+    padding-top: 60px;
+
+    &__outer {
+      padding: 0 20px;
+    }
+
+    &__inner {
+      padding: 0;
+    }
+
+    &__head {
+      padding-bottom: 50px;
+      display: block;
+    }
+
+    &__logo {
+      width: 60px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__nav {
+      margin-top: 56px;
+      display: block;
+
+      &__col {
+
+        & + .l-footer__nav__col {
+          margin-top: 26px;
+          margin-left: 0;
+        }
+
+        &:nth-child(3) {
+          .l-footer__menu__item {
+            &:not(.-child) {
+              margin-bottom: 17.5px;
+            }
+          }
+        }
+      }
+    }
+
+    &__menu {
+
+      &__item {
+
+        &:not(.-child) {
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    &__foot {
+      padding: 35px 0;
+    }
+
+    &__copy {
+      font-size: 10px;
+    }
+  }
+
+  // 下層
+  .p-page {
+
+    .l-footer {
+      padding-top: 30px;
+    }
+  }
+}

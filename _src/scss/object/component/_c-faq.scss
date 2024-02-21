@@ -1,0 +1,106 @@
+// ==========================================================================
+// c-faq
+// ==========================================================================
+
+
+.c-faq {
+  padding: 20px;
+  border: solid 2px var(--gray2);
+  border-radius: 8px;
+
+  & + .c-faq {
+    margin-top: 25px;
+  }
+
+  // &__inner {
+  //   max-width: 1037px;
+  //   margin: 0 auto;
+  // }
+
+  &__head {
+    position: relative;
+    padding-right: 109px;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 24.5px;
+      bottom: 0;
+      width: 25px;
+      height: 14px;
+      margin: auto;
+      background-image: url(../img/icon_down.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      content: "";
+    }
+
+    &__inner {}
+  }
+
+  &__body {
+    padding-right: 109px;
+
+    &__inner {
+      padding-top: 24.5px;
+      padding-bottom: 18px;
+    }
+
+    p {
+
+      &:not([class]) {
+        a:not([class]) {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // 表示
+  &.is-show {
+    border: solid 2px var(--main);
+
+    .c-faq__head {
+      padding-top: 22.5px;
+
+      &::after {
+        background-image: url(../img/icon_up.svg);
+      }
+    }
+  }
+}
+
+
+@include mq('sp') {
+
+  .c-faq {
+    padding: 19.5px;
+
+    &__head {
+      padding-right: 40px;
+
+      &::after {
+        right: 0;
+      }
+    }
+
+    &__body {
+      padding-right: 0;
+
+      &__inner {
+        padding-top: 19.5px;
+        padding-bottom: 15.5px;
+      }
+    }
+
+    // 表示
+  &.is-show {
+
+    .c-faq__head {
+      padding-top: 10px;
+    }
+  }
+  }
+}

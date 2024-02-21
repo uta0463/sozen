@@ -1,0 +1,132 @@
+// ==========================================================================
+// u-column
+// ==========================================================================
+
+// .u-column {
+//   width: calc(100% + 33px);
+//   margin-left: -16.5px;
+//   display: flex;
+//   flex-wrap: wrap;
+
+//   &__col {
+//     margin: 0 16.5px 33px;
+//   }
+
+//   &.-col4 {
+//     .u-column__col {
+//       width: calc(25% - 33px);
+//     }
+//   }
+
+//   &.-col3 {
+//     .u-column__col {
+//       width: calc(33.3333% - 33px);
+//     }
+//   }
+
+//   &.-col2 {
+//     .u-column__col {
+//       width: calc(50% - 33px);
+//     }
+//   }
+
+//   &.-primary,
+//   &.-secondary {
+//     width: 100%;
+//     margin-left: 0;
+//     justify-content: space-between;
+
+//     .u-column__col {
+//       margin: 0 0 33px;
+
+//       &:nth-child(1) {
+//         // width: calc(69.0453230472% - 33px);
+//         width: 69.045323%;
+//       }
+
+//       &:nth-child(2) {
+//         // width: calc(30.954676953% - 33px);
+//         width: 27.7724204%;
+//       }
+//     }
+//   }
+
+//   &.-secondary {
+//     .u-column__col {
+
+//       &:nth-child(1) {
+//         order: 2;
+//       }
+
+//       &:nth-child(2) {
+//         order: 1;
+//       }
+//     }
+//   }
+// }
+
+
+// @include mq('sp') {
+
+//   .u-column {
+
+//     &.-spreset {
+//       width: 100%;
+//       margin-left: 0;
+//       display: block;
+  
+//       &.-col4,
+//       &.-col3,
+//       &.-col2,
+//       &.-primary,
+//       &.-secondary {
+//         .u-column__col {
+//           width: 100%;
+//           margin: 0;
+  
+//           & + .u-column__col {
+//             margin-top: 30px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.u-column {
+  display: flex;
+}
+
+.u-column__col {
+  width: 50%;
+
+  &:nth-child(1) {
+    padding-right: 30px;
+    border-right: solid 1px var(--gray2);
+  }
+
+  &:nth-child(2) {
+    padding-left: 30px;
+  }
+}
+
+@include mq('sp') {
+
+  .u-column {
+    display: block;
+  }
+  
+  .u-column__col {
+    width: 100%;
+  
+    &:nth-child(1) {
+      padding-right: 0;
+      border-right: 0;
+    }
+  
+    &:nth-child(2) {
+      margin-top: 71.5px;
+      padding-left: 0;
+    }
+  }
+}

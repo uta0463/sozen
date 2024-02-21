@@ -1,0 +1,65 @@
+// ==========================================================================
+// p-page
+// ==========================================================================
+
+.p-page {
+
+  &__container {
+    padding-top: 103.5px;
+  }
+
+  &__heading {
+    width: 100%;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__label {
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  &__contents {}
+
+  &__wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  &__section {
+
+    & + .p-page__section {
+      margin-top: 120px;
+    }
+
+    &__inner {}
+  }
+}
+
+@include mq('sp') {
+
+  .p-page {
+
+    &__container {
+      padding-top: 60px;
+    }
+  
+    &__heading {
+      min-height: 180px;
+  
+      &__label {
+        font-size: 22px;
+      }
+    }
+
+    &__section {
+
+      & + .p-page__section {
+        margin-top: 90px;
+      }
+    }
+  }
+}

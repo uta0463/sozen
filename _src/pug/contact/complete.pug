@@ -1,0 +1,92 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=1, maximum-scale=2")
+    meta(name="format-detection" content="telephone=no")
+
+    title xxxxx
+    meta(name="description" content="xxxxx")
+
+    meta(property="og:locale" content="ja-JP")
+    meta(property="og:type" content="article")
+    meta(property="og:site_name" content="xxxxx")
+    meta(property="og:title" content="xxxxx")
+    meta(property="og:description" content="xxxxx")
+    meta(property="og:url" content="xxxxx/contact/")
+    meta(property="og:image" content="xxxxx/assets/img/ogimage.jpg")
+    meta(name="twitter:card" content="summary_large_image")
+
+    link(rel="icon" href="/assets/img/favicon.ico")
+    link(rel="apple-touch-icon" href="xxxxx/assets/img/apple-touch-icon.png")
+    link(rel="icon" type="image/png" href="xxxxx/assets/img/android-chrome-192x192.png")
+
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet")
+
+    link(rel="stylesheet" href="/assets/css/style.css")
+
+  body.p-page.p-contact.p-contact-complete
+
+    .l-app
+
+      .js-guideline
+
+      include ../_components/_header_page.pug
+
+      #wrapper.l-wrapper
+
+        main#main.l-main
+
+          section.p-page__container
+
+            .p-page__heading
+              .l-wrapper__outer
+                .l-wrapper__inner
+                  h1.p-page__heading__label
+                    |お問い合わせ
+
+            .p-page__contents
+              .l-wrapper__outer
+                .l-wrapper__inner
+
+                  .p-page__wrapper
+
+                    form.c-form.-complete
+
+                      .c-form__thanks
+                        .c-form__thanks__head
+                          p.c-form__thanks__title
+                            |お問い合わせフォームの
+                            br.is-sp
+                            |送信を完了致しました。
+                          .c-form__thanks__lead
+                            p
+                              |この度はお問い合わせいただきまして誠にありがとうございます。
+                              br
+                              |ご入力頂いたメールアドレス宛へ、ご確認メールをお送りしておりますのでご確認ください。
+                            p
+                              |内容を確認次第、担当者より折返しご連絡させていただきます。
+                              br
+                              |今しばらくお待ちくださいませ。
+
+                        .c-form__thanks__body
+                          .c-button__form
+                            a(href="/")
+                              span トップページへ戻る
+
+
+
+
+                  .u-breadcrumb
+                    ol
+                      li
+                        a(href="/") TOP
+                      li お問い合わせ
+
+
+        include ../_components/_footer_page.pug
+
+    script(src="/assets/js/main.js")

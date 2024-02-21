@@ -1,0 +1,175 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=1, maximum-scale=2")
+    meta(name="format-detection" content="telephone=no")
+
+    title xxxxx
+    meta(name="description" content="xxxxx")
+
+    meta(property="og:locale" content="ja-JP")
+    meta(property="og:type" content="article")
+    meta(property="og:site_name" content="xxxxx")
+    meta(property="og:title" content="xxxxx")
+    meta(property="og:description" content="xxxxx")
+    meta(property="og:url" content="xxxxx/members/")
+    meta(property="og:image" content="xxxxx/assets/img/ogimage.jpg")
+    meta(name="twitter:card" content="summary_large_image")
+
+    link(rel="icon" href="/assets/img/favicon.ico")
+    link(rel="apple-touch-icon" href="xxxxx/assets/img/apple-touch-icon.png")
+    link(rel="icon" type="image/png" href="xxxxx/assets/img/android-chrome-192x192.png")
+
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet")
+
+    link(rel="stylesheet" href="/assets/css/style.css")
+
+  body.p-page.p-members.p-members-complete
+
+    .l-app
+
+      .js-guideline
+
+      include ../_components/_header_members.pug
+
+      #wrapper.l-wrapper
+
+        main#main.l-main
+
+          section.p-page__container
+
+            .p-page__heading
+              .l-wrapper__outer
+                .l-wrapper__inner
+                  h1.p-page__heading__label
+                    |体験募集
+
+            .p-page__contents
+              .l-wrapper__outer
+                .l-wrapper__inner
+
+                  .p-page__wrapper
+
+                    section(data-id="information").p-page__section
+                      .p-page__section__inner
+                        h2.u-heading__page
+                          |体験について
+                        .p-members__lead
+                          p
+                            |サッカーに興味があるお子様を募集しています。体験入部及び入部申込はいつでも受け付けています。
+                          p
+                            |お気軽に「
+                            a(href="#form") 体験申し込みフォーム
+                            |」からご連絡をください。
+                          p
+                            |入部に際しては２～３回練習に参加して、様子を見てからお申し込みいただいて結構です。
+                        
+                        .u-column
+                          .u-column__col
+                            h3.u-heading__l4
+                              |活動内容
+                            .c-info__list
+                              dl
+                                dt
+                                  p
+                                    |募集対象
+                                dd
+                                  p
+                                    |小学校 　　1 〜 6年生
+                                  p
+                                    |未就学児　年中 〜 年長
+                              dl
+                                dt
+                                  p
+                                    |練習日時
+                                dd
+                                  p
+                                    |土、日、祝日の午前または午後
+                              dl
+                                dt
+                                  p
+                                    |練習場所
+                                dd
+                                  p
+                                    |平塚市崇善小学校　校庭
+
+                          .u-column__col
+                            h3.u-heading__l4
+                              |アクセス
+                            .c-info__map
+                              .c-info__map__head
+                                p
+                                  |練習場所の平塚氏崇善小学校のアクセスになります。
+                                  br
+                                  |〒254-0041
+                                  br
+                                  |神奈川県平塚市浅間町４-３
+                              .c-info__map__body
+                                .u-map
+                                  iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.8980067036027!2d139.3428220751478!3d35.33335414900662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019acdff3fa3385%3A0xaabc0de2c50702a1!2z5bmz5aGa5biC56uL5bSH5ZaE5bCP5a2m5qCh!5e0!3m2!1sja!2sjp!4v1708321877892!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+
+
+
+
+                    section(data-id="item").p-page__section
+                      .p-page__section__inner
+                        h2.u-heading__page
+                          |服装・持ち物
+                        ul.u-list
+                          li
+                            p 運動のできる服装と靴（運動靴、アップシューズ等）
+                          li
+                            p サッカーボール（無い場合でも大丈夫です）
+                          li
+                            p 水筒
+
+
+                    section(data-id="form").p-page__section
+                      .p-page__section__inner
+                        h2.u-heading__page
+                          |体験お申込みフォーム
+                        .p-members__lead
+                          p
+                            |お問合せ確認後こちらより改めてご連絡いたします。
+                          p.u-note
+                            |返信に1週間ほどかかってしまう場合もございます。
+                        
+                        form.c-form.-complete
+
+                          .c-form__thanks
+                            .c-form__thanks__head
+                              p.c-form__thanks__title
+                                |体験お申込みフォームの
+                                br.is-sp
+                                |送信を完了致しました。
+                              .c-form__thanks__lead
+                                p
+                                  |この度は体験のお申込みをいただきまして誠にありがとうございます。
+                                  br
+                                  |ご入力頂いたメールアドレス宛へ、ご確認メールをお送りしておりますのでご確認ください。
+                                p
+                                  |内容を確認次第、担当者より折返しご連絡させていただきます。
+                                  br
+                                  |今しばらくお待ちくださいませ。
+
+                            .c-form__thanks__body
+                              .c-button__form
+                                a(href="/")
+                                  span トップページへ戻る
+
+
+
+                  .u-breadcrumb
+                    ol
+                      li
+                        a(href="/") TOP
+                      li 体験募集
+
+
+        include ../_components/_footer_members.pug
+
+    script(src="/assets/js/main.js")

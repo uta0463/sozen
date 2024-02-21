@@ -1,0 +1,49 @@
+// ==========================================================================
+// u-icon
+// ==========================================================================
+
+.u-icon {
+  width: 55px;
+  height: 55px;
+  border: solid 2px var(--gray2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    width: 14px;
+    height: 14px;
+    background: url(../img/icon_arrow-b.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+  }
+
+  &.-white {
+    background-color: var(--white);
+    border: solid 2px var(--white);
+
+    &::before {
+      background: url(../img/icon_arrow.svg);
+    }
+  }
+}
+
+@include mq('pc') {
+
+  .u-icon {
+    &::before {
+      transition: transform .4s;
+    }
+  }
+}
+
+@include mq('sp') {
+
+  .u-icon {
+    width: 45px;
+    height: 45px;
+  }
+}

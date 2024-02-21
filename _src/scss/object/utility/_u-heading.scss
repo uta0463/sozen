@@ -1,0 +1,73 @@
+// ==========================================================================
+// u-heading
+// ==========================================================================
+
+.u-heading {
+
+  &__l2 {
+    font-family: $font-en;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+
+    span {
+      margin-top: 6px;
+      color: var(--gray1);
+      font-family: $font-base;
+      font-size: 14px;
+      display: block;
+    }
+
+    &.-white {
+      color: var(--white)
+    }
+  }
+
+  &__l3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &__l4 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &__page {
+    padding-bottom: 15.5px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    border-bottom: solid 1px var(--main);
+  }
+}
+
+
+@include mq('sp') {
+
+  .u-heading {
+
+    &__l2 {
+      font-size: 26px;
+  
+      span {
+        font-size: 13px;
+      }
+    }
+
+    &__l3 {
+      font-size: 22px;
+    }
+
+    &__l4 {
+      font-size: 20px;
+    }
+  
+    &__page {
+      font-size: 22px;
+    }
+  }
+}

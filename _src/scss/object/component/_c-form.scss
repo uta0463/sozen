@@ -1,0 +1,227 @@
+// ==========================================================================
+// c-form
+// ==========================================================================
+
+
+.c-form {
+
+  &::placeholder {
+    color: var(--gray1);
+    font-weight: 400;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  & + .c-form__item {
+    margin-top: 35px;
+  }
+
+    &__head {
+      // width: 26.5306122448%;
+      width: 30.6122448979%;
+      padding-right: 20px;
+
+      &__inner {
+        display: flex;
+
+        .u-tag__req {
+          margin-right: 10px;
+          flex-shrink: 0;
+        }
+      }
+
+      // 任意
+      &.-any {
+        .c-form__item__label {
+          margin-left: 70px;
+        }
+      }
+    }
+
+    &__body {
+      // width: 73.469387756%;
+      width: 69.387755103%;
+      display: flex;
+
+      &.-row {
+        flex-direction: column;
+      }
+    }
+
+    &__label {
+      line-height: 1.5;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    max-width: 450px;
+    padding: 4px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: solid 2px var(--main);
+    border-radius: 8px;
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 318px;
+    padding: 7px 20px;
+    font-size: 16px;
+    line-height: 2;
+    border: solid 2px var(--main);
+    border-radius: 8px;
+  }
+
+  &__btn {
+    margin-top: 90px;
+  }
+
+  &__thanks {
+
+    &__head {}
+
+    &__body {
+      margin-top: 82px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    &__lead {
+      margin-top: 36px;
+      text-align: center;
+
+      p:not([class]) {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+
+// 確認画面
+.-confirm {
+
+  &.c-form {
+
+    .c-form__btn {
+      display: flex;
+      justify-content: center;
+
+      .c-button__form {
+        width: 100%;
+        max-width: 380px;
+
+        &.-back {
+          max-width: 180px;
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
+
+// 完了画面
+.-complete {
+
+  &.c-form {
+  
+  }
+}
+
+
+@include mq('sp') {
+
+  .c-form {
+
+    &__item {
+      display: block;
+  
+    & + .c-form__item {
+      margin-top: 35px;
+    }
+  
+      &__head {
+        width: 100%;
+        padding-right: 0;
+
+        &.-any {
+          .c-form__item__label {
+            margin-left: 0;
+          }
+        }
+      }
+  
+      &__body {
+        width: 100%;
+        margin-top: 15px;
+      }
+  
+      &__label {
+        font-size: 15px;
+      }
+    }
+
+    &__input {
+      max-width: 340px;
+    }
+
+    &__textarea {
+      min-height: 240px;
+      line-height: 1.8;
+    }
+
+    &__btn {
+      margin-top: 60px;
+    }
+
+    &__thanks {
+
+      &__head {}
+  
+      &__body {
+        margin-top: 54px;
+      }
+  
+      &__title {
+        font-size: 20px;
+        text-align: left;
+      }
+  
+      &__lead {
+        margin-top: 29px;
+        text-align: left;
+
+        p:not([class]) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  // 確認画面
+  .-confirm {
+
+    &.c-form {
+
+      .c-form__btn {
+
+        .c-button__form {
+          max-width: 150px;
+
+          &.-back {
+            max-width: 150px;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}

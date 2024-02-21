@@ -1,0 +1,29 @@
+// ==========================================================================
+// l-wrapper
+// ==========================================================================
+
+.l-wrapper {
+
+	&__outer {
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+
+	&__inner {
+		max-width: $base-layout;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+
+@include mq('sp') {
+
+	.l-wrapper {
+		&__outer {
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+
+	}
+}

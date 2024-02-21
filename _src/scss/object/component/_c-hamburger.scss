@@ -1,0 +1,92 @@
+// ==========================================================================
+// c-hamburger
+// ==========================================================================
+
+
+.c-hamburger {
+  position: fixed;
+  top: 9px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 110;
+  
+  &__inner {
+    // width: 36px;
+    // height: 36px;
+    position: relative;
+    width: 26px;
+    height: 12px;
+    transition: .6s;
+  }
+
+  &__item {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    span {
+      position: absolute;
+      // left: 7px;
+      // width: 24px;
+      left: 0;
+      width: 26px;
+      height: 2px;
+      background-color: var(--black);
+      border-radius: 2px;
+      display: inline-block;
+      transition: .4s;
+
+      &:nth-child(1) {
+        // top: 11.5px;
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        // top: 16.5px;
+        top: 5px;
+      }
+
+      &:nth-child(3) {
+        // top: 21.5px;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+// menu open
+.is-open {
+  .c-hamburger {
+    &__inner {
+      transform: rotate(360deg);
+    }
+
+    &__item {
+
+      span {
+        // width: 18px;
+        // left: 9.5px;
+
+
+        &:nth-child(1) {
+          // top: 10.5px;
+          // transform: translateY(6px) rotate(-45deg);
+          transform: translateY(5px) rotate(-45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-5px) rotate(45deg);
+        }
+      }
+    }
+  }
+}

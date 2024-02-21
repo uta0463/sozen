@@ -1,0 +1,54 @@
+// ==========================================================================
+// p-news
+// ==========================================================================
+
+.p-news {
+
+  &__contents {}
+}
+
+// 詳細
+.p-news-detail {
+
+  &__contents {
+    padding-top: 60px;
+  }
+
+  &__head {}
+
+  &__body {
+    margin-top: 43.5px;
+
+    p:not([class]) {
+      font-weight: 400;
+    }
+  }
+
+  &__img {
+    text-align: center;
+  }
+
+  &__summary {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__date {
+    margin-right: 20px;
+  }
+
+  &__tag {}
+
+  &__title {
+    margin-top: 28px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+}
+
+@include mq('sp') {
+
+  .p-news {}
+}

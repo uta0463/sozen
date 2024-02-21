@@ -1,0 +1,76 @@
+// ==========================================================================
+// u-staff
+// ==========================================================================
+
+.u-staff__set {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.u-staff {
+  width: calc(33.3333% - 40px);
+  margin: 0 20px 55px;
+
+  &__head {}
+
+  &__body {
+    padding-top: 16px;
+  }
+
+  &__label {
+    font-weight: 700;
+    line-height: 1.6;
+
+    span {
+      margin-bottom: 6px;
+      font-size: 14px;
+      display: block;
+    }
+  }
+
+  &__text {
+    margin-top: 25px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+}
+
+@include mq('smallpc') {
+
+  .u-staff {
+    width: calc(50% - 40px);
+  }
+}
+
+@include mq('sp') {
+
+  .u-staff__set {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
+  
+  .u-staff {
+    width: calc(50% - 20px);
+    margin: 0 10px 46px;
+  
+    &__body {
+      padding-top: 11px;
+    }
+  
+    &__label {
+      font-size: 15px;
+  
+      span {
+        margin-bottom: 2px;
+        font-size: 13px;
+      }
+    }
+  
+    &__text {
+      margin-top: 17px;
+      font-size: 14px;
+    }
+  }
+}

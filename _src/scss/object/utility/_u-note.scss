@@ -1,0 +1,23 @@
+// ==========================================================================
+// u-note
+// ==========================================================================
+
+.u-note {
+  position: relative;
+  padding-left: 1em;
+  font-size: 14px;
+  font-weight: 400;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    content: "※";
+  }
+}
+
+@include mq('sp') {
+
+  .u-note {
+    line-height: 1.8;
+  }
+}

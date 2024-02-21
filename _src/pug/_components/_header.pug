@@ -1,0 +1,41 @@
+header#header.l-header
+  .l-header__outer
+    .l-header__inner
+      .l-header__head
+        h1.l-header__logo
+          a(href="/").l-header__logo__inner
+            img(src="/assets/img/logo.png" alt="平塚 崇善FC")
+
+      .l-header__ctrl
+
+        .l-header__menu
+          nav.l-nav
+            ul.l-nav__menu
+              li.l-nav__menu__item
+                a(href="#about")
+                  |崇善FCについて
+              li.l-nav__menu__item
+                a(href="/members/")
+                  |体験募集
+              li.l-nav__menu__item
+                a(href="/faq/")
+                  |よくあるご質問
+              li.l-nav__menu__item
+                a(href="/contact/")
+                  |お問い合わせ
+
+        //- .l-header__btn.c-button.-contact
+          a(href="/contact/")
+            span お問い合わせ
+        .l-header__btn.c-button.-s
+          a(href="/members/#form")
+            span 体験お申込み
+
+        .l-header__hamburger
+          .c-hamburger.js-menu
+            .c-hamburger__inner
+              .c-hamburger__item
+                span
+                span
+                span
+
